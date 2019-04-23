@@ -170,8 +170,15 @@ export default function ModalContainerFactory(
     };
 
     _onExportJSONMap = () => {
+      const {uiState} = this.props;
+      const {hasData} = uiState.exportMap[EXPORT_MAP_FORMAT.JSON];
+
+      // we pass all props because we avoid to create new variables
+      const data = hasData ? KeplerGlSchema.save(this.props)
+        : KeplerGlSchema.getConfigToSave(this.props);
+
       this._downloadFile(
-        JSON.stringify(KeplerGlSchema.save(this.props), null, 2),
+        JSON.stringify(data, null, 2),
         'application/json',
         'keplergl.json'
       );

@@ -41,7 +41,9 @@ export {
   ADD_MAP_STYLE_ID,
   DEFAULT_LAYER_GROUPS,
   DEFAULT_MAP_STYLES,
-  THEME
+  THEME,
+  EXPORT_MAP_FORMAT,
+  EXPORT_MAP_FORMAT_OPTIONS
 } from './default-settings';
 export {VizColorPalette, DataVizColors} from './custom-color-ranges';
 export {COLOR_RANGES, DefaultColorRange} from './color-ranges';

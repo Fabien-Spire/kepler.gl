@@ -113,6 +113,10 @@ const StyledJsonExportSection = styled(StyledExportSection)`
   }
 `;
 
+const exportJsonPropTypes = {
+  options: PropTypes.object
+};
+
 const ExportJsonMap = ({
   config = {}
 }) => (
@@ -140,6 +144,8 @@ const ExportJsonMap = ({
     </StyledJsonExportSection>
   </div>
 );
+
+ExportJsonMap.propTypes = exportJsonPropTypes;
 
 const propTypes = {
   options: PropTypes.object,
